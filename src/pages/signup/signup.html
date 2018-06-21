@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-title padding>Signup</ion-title>
+</ion-header>
+
+<ion-content padding>
+
+  <p>
+    <label>Phone </label> &emsp;&emsp;
+    <input type="number" id="login_input_phone" />
+  </p>
+  <p>
+    <label>Name </label> &emsp;&emsp;
+    <input type="text" id="login_input_name" />
+  </p>
+  <p>
+    <label>Password </label> &emsp;
+    <input type="password" id="login_input_password" />
+  </p>
+  <p>
+    <label>Referral Code (if any) </label> &emsp;&emsp;
+    <input type="text" id="login_input_referralcode" />
+  </p>
+
+  <button ion-button secondary id="btn_signup_signup">Signup</button>
+  <br>
+  <br>
+  <br>
+  <a (click)="launchLoginpage()">Already have an account?</a>
+</ion-content>

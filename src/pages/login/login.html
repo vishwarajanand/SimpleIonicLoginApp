@@ -1,0 +1,28 @@
+<ion-header>
+  <!-- <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar> -->
+  <ion-title padding>Login</ion-title>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    <label>Phone </label> &emsp;&emsp;
+    <input type="text" id="login_phone" />
+  </p>
+  <p>
+    <label>Password </label> &emsp;
+    <input type="password" id="login_password" />
+  </p>
+  <button ion-button secondary (click)="launchHome()">Login</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a [navPush]="Forgotpassword" (click)="launchForgotpassword()">Forgot Password</a>
+  <br>
+  <br>
+  <button ion-button secondary (click)="launchSignupPage()">Create Account ? Signup</button>
+</ion-content>

@@ -8,12 +8,20 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
+import { Camera } from '@ionic-native/camera';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    SignupPage,
+    ForgotpasswordPage
   ],
   imports: [
     BrowserModule,
@@ -22,12 +30,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginPage,
+    SignupPage,
     HomePage,
-    ListPage
+    ListPage,
+    ForgotpasswordPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BackgroundGeolocation,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

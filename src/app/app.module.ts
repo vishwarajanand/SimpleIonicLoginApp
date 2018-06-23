@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,6 +14,7 @@ import { Camera } from '@ionic-native/camera';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
+import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -41,7 +44,8 @@ import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
     SplashScreen,
     BackgroundGeolocation,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalvarsProvider
   ]
 })
 export class AppModule {}

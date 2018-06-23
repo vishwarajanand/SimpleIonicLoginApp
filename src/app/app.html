@@ -1,4 +1,4 @@
-<ion-menu [content]="content" *ngIf="showNavMenu">
+<ion-menu [content]="content" *ngIf="logger(this.globalvarsProvider.loginState)">
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
